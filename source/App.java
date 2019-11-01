@@ -1,6 +1,3 @@
-import java.util.Date;
-
-
 public class App {
 
    public static void main(String args[]) {
@@ -14,6 +11,7 @@ public class App {
       myNumberObject.add(9);
       myOtherNumberObject.add(45);
       myNumberObject.add(-22);
+      myNumberObject.add(4);
 
       System.out.println("my number object is equal to " + myNumberObject.internalNumber);
       System.out.println("my number other object is equal to " + myOtherNumberObject.internalNumber);
