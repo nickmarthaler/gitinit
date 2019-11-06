@@ -1,40 +1,27 @@
 public class App {
 
    public static void main(String args[]) {
-      Number myNumberObject;
-      myNumberObject = new Number();
-      Number myOtherNumberObject;
-      myOtherNumberObject = new Number();
-      myNumberObject.internalNumber = 20;
-      myOtherNumberObject.internalNumber = 50;
-      myNumberObject.add(8);
-      myNumberObject.add(9);
-      myOtherNumberObject.add(45);
-      myNumberObject.add(-22);
-      myNumberObject.add(4);
 
-      System.out.println("my number object is equal to " + myNumberObject.internalNumber);
-      System.out.println("my number other object is equal to " + myOtherNumberObject.internalNumber);
-   }
-
-   private static int add(int i, int j) {
-       return i + j;
+      Roster nickRoster = new Roster();
+      Roster daveRoster = new Roster(41);
 
 
-   }
+      String[] players = {"Adam", "Bill", "Charlie", "Dan", "Eric", "Fred", "Greg", "Harry", "Ike", "John", "Kelly"};
+      int count = 0;
+      while (daveRoster.hasOpenSlots()) {
+          daveRoster.addPlayer(players[count]);
+          if(count < players.length - 1) {
+              count++;
+          }
+          else {
+              count = 0;
+          }
+      }
 
+      System.out.println(daveRoster);
 
-   private static int add(int i, int j, int k) {
-       return i + j + k;
 
 
    }
-
-
-
-
-
-
-
 
 }
