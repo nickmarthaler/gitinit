@@ -5,13 +5,13 @@ This object can hold a roster of players.
 
 public class Roster {
 
-    // The array that will hold the roster.
+    // The array that will hold the roster. Property/field
     private String roster [];
 
-    // The size of the roster.
+    // The size of the roster. Property/field
     private int size;
 
-    // The number of players on the roster.
+    // The number of players on the roster. Property/field
     private int activePlayers;
 
 
@@ -22,7 +22,7 @@ public class Roster {
         this.activePlayers = 0;
     }
 
-    // Consturctor for a default 10 player roster.
+    // Constructor for a default 10 player roster.
     public Roster() {
         this(10);
     }
@@ -34,11 +34,13 @@ public class Roster {
 
 
     // Add a player to the roster.
-    public void addPlayer(String player) {
+    public boolean addPlayer(String player) {
         if (this.activePlayers < this.roster.length) {
             this.roster[this.activePlayers] = player;
             this.activePlayers++;
+            return true;
         }
+        return false;
     }
 
     // Print the roster.
